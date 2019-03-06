@@ -28,16 +28,16 @@ class App extends Component {
           pagination={true}
           size={10}
           onData={res => ({
-            title: res.abstract || " ",
+            title: res.journalTitle || " ",
             description:
               "</span><br/><br/><div class='result-author' TITLE='" +
-              res.abstract +
+              res.journalTitle +
               "'>by " +
-              res.url +
+              res.publication +
               "https://google.com/search?q=" +
-              res.url +
+              res.publication +
               "</div>",
-            url: res.url
+            url: res.publication
           })}
           className="result-data"
           innerClass={{
